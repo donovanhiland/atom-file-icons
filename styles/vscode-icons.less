@@ -58,13 +58,11 @@
 }
 
 .list-tree.has-collapsable-children .list-nested-item > .list-item::before {
-    content: '';
-    background-image: url("atom://atom-file-icons/icons/expanded_dark.svg");
+    .file-icon(expanded_dark);
 }
 
 .list-tree.has-collapsable-children .list-nested-item.collapsed > .list-item::before {
-    content: '';
-    background-image: url("atom://atom-file-icons/icons/collapsed_dark.svg");
+    .file-icon(collapsed_dark);
 }
 
 .tab {
