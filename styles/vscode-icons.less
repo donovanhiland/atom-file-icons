@@ -48,7 +48,7 @@
 
 .project-root-header {
     background-color: #3A3A3A;
-    text-transform: capitalize;
+    text-transform: uppercase;
     padding-left: 5px;
     color: darken(white, 20%);
 }
@@ -386,7 +386,7 @@
     [data-name=".npmrc"]:before,
     [data-name="npm-debug.log"]:before,
     [data-name="package.json"]:before {
-        .file-icon(npm);
+        .file-icon(npm2);
     }
 
     [data-name$=".bowerrc"]:before,
@@ -456,6 +456,10 @@
 
         [data-name="images"]:before {
             .file-icon(images_folder_opened)
+        }
+
+        [data-name$=".meteor"]:before {
+            .file-icon(meteor);
         }
     }
 
