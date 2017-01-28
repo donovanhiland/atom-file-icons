@@ -1,7 +1,7 @@
 {
   "name": "atom-file-icons",
   "main": "./lib/atom-file-icons",
-  "version": "0.4.1",
+  "version": "0.4.3",
   "description": "A short description of your package",
   "keywords": [],
   "repository": "https://github.com/donovanhiland/atom-file-icons",
