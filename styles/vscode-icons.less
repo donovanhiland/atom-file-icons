@@ -6,6 +6,7 @@
     font-size: 1.25em;
     height: 1.5rem;
     vertical-align: -4px;
+    top: 0;
     background-image: url("atom://atom-file-icons/icons/@{filename}.svg");
 }
 
@@ -22,6 +23,10 @@
     margin-top: 0.15em;
 }
 
+.tree-view .selected:before {
+  background: #414147;
+}
+
 .icon-file-text::before,
 .icon-file-directory:before {
     min-width: 16px;
@@ -30,6 +35,23 @@
 
 .icon-file-text:before { .file-icon(default_file) }
 .icon-file-directory:before { .file-icon(default_folder) }
+.project-root-header {
+  background-color: #3A3A3A;
+  text-transform: capitalize;
+  padding-left: 5px;
+  color: darken(white, 20%);
+}
+.icon-repo:before {
+  content: '';
+}
+.list-tree.has-collapsable-children .list-nested-item > .list-item::before {
+  content: '';
+  background-image: url("atom://atom-file-icons/icons/expanded_dark.svg");
+}
+.list-tree.has-collapsable-children .list-nested-item.collapsed > .list-item::before {
+  content: '';
+  background-image: url("atom://atom-file-icons/icons/collapsed_dark.svg");
+}
 
 .tab {
     .title:not(.icon-tools) {
@@ -245,6 +267,12 @@
 
     }
 
+}
+
+.list-tree.has-collapsable-children .list-nested-item > .list-item::before {
+  content: '';
+  width: 12px;
+  height: 12px;
 }
 
 // TODO: add an option to enable/disable icons in grammar list
