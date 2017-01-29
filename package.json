@@ -2,7 +2,7 @@
   "name": "atom-file-icons",
   "main": "./lib/atom-file-icons",
   "version": "0.4.7",
-  "description": "A short description of your package",
+  "description": "logo style icons and ui tweaks to mirror vscode",
   "keywords": [
     "icons",
     "file-icons",

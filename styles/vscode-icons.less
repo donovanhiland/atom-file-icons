@@ -50,7 +50,7 @@
     background-color: #3A3A3A;
     text-transform: uppercase;
     padding-left: 5px;
-    color: darken(white, 20%);
+    color: darken(white, 20%) !important;
 }
 
 .icon-repo:before {
@@ -439,8 +439,8 @@
 }
 
 .tree-view {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 
     .expanded > div > .icon-file-directory:before {
         .file-icon(default_folder_opened)
