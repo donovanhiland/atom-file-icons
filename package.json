@@ -3,7 +3,21 @@
   "main": "./lib/atom-file-icons",
   "version": "0.4.6",
   "description": "A short description of your package",
-  "keywords": [],
+  "keywords": [
+    "icons",
+    "file-icons",
+    "vscode",
+    "folders",
+    "file-tree",
+    "file tree",
+    "logos",
+    "fileicons",
+    "file icons",
+    "visual studio code",
+    "vscode",
+    "vsc",
+    "vscode-icons"
+  ],
   "repository": "https://github.com/donovanhiland/atom-file-icons",
   "license": "MIT",
   "engines": {
