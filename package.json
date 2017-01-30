@@ -1,7 +1,7 @@
 {
   "name": "atom-file-icons",
   "main": "./lib/atom-file-icons",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "description": "logo style icons and ui tweaks to mirror vscode",
   "keywords": [
     "icons",
