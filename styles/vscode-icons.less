@@ -167,18 +167,26 @@
         .file-icon(rspec);
     }
 
-    [data-name$=".rake"]:before,
-    [data-name^="Rakefile"]:before {
-        .file-icon(rake);
-    }
-
-    [data-name$=".erb"]:before,
-    [data-name^="Gemfile"]:before {
+    [data-name$=".erb"]:before {
         .file-icon(erb);
     }
 
     [data-name$=".rb"]:before,
-    [data-name$=".ru"]:before {
+    [data-name$=".ru"]:before,
+    [data-name^="Appraisals"]:before,
+    [data-name^="Berksfile"]:before,
+    [data-name^="Capfile"]:before,
+    [data-name^="Dangerfile"]:before,
+    [data-name^="Deliverfile"]:before,
+    [data-name^="Fastfile"]:before,
+    [data-name^="Gemfile"]:before,
+    [data-name^="Guardfile"]:before,
+    [data-name^="Jarfile"]:before,
+    [data-name^="Mavenfile"]:before,
+    [data-name^="Podfile"]:before,
+    [data-name^="Puppetfile"]:before,
+    [data-name^="Rakefile"]:before,
+    [data-name^="Snapfile"]:before {
         .file-icon(ruby);
     }
 
