@@ -1,0 +1,585 @@
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url("atom://atom-file-icons/fonts/sourcesanspro-bold.ttf");
+}
+
+.file-icon(@filename) {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	content: "";
+	font-size: 1.25em;
+	height: 1.5rem !important;
+	vertical-align: -4px;
+	top: 0;
+	background-image: url("atom://atom-file-icons/icons/@{filename}.svg") !important;
+}
+
+.grammar-icon(@filename) {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("atom://atom-file-icons/icons/@{filename}.svg");
+	content: "";
+	display: block;
+	float: right;
+	height: 1.7em;
+	width: 1.7em;
+	margin-top: 0.15em;
+}
+
+.tree-view .selected:before {
+	background: #414147;
+}
+
+.icon-file-directory:before,
+.icon-file-text::before {
+	min-width: 16px;
+	width: 1em;
+}
+
+.icon-file-text:before {
+	.file-icon(default_file)
+}
+
+.icon-file-directory:before {
+	.file-icon(default_folder)
+}
+
+.project-root-header {
+	background-color: #3A3A3A;
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro';
+	padding-left: 5px;
+	color: darken(white, 20%) !important;
+}
+
+.icon-repo:before {
+	display: none;
+}
+
+.list-tree.has-collapsable-children .list-nested-item > .list-item::before {
+	.file-icon(expanded_dark);
+}
+
+.list-tree.has-collapsable-children .list-nested-item.collapsed > .list-item::before {
+	.file-icon(collapsed_dark);
+}
+
+.tab {
+	.title:not(.icon-tools) {
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 16px;
+			height: 16px !important;
+			vertical-align: -4px;
+			margin-right: 4px;
+		}
+	}
+}
+
+.fuzzy-finder .list-group,
+.tab,
+.tree-view .file {
+	[data-name$=".env"]:before {
+		.file-icon(config);
+	}
+
+	[data-name$=".yml"]:before {
+		.file-icon(yaml);
+	}
+
+	[data-name$=".htm"]:before,
+	[data-name$=".html"]:before {
+		.file-icon(html5);
+	}
+
+	[data-name$=".es"]:before,
+	[data-name$=".es6"]:before,
+	[data-name$=".js"]:before {
+		.file-icon(javascript);
+	}
+
+	[data-name$=".css"]:before {
+		.file-icon(css);
+	}
+
+	[data-name$=".jsx"]:before {
+		.file-icon(react);
+	}
+
+	[data-name$=".vue"]:before {
+		.file-icon(vue);
+	}
+
+	[data-name$=".json"]:before,
+	[data-name$=".json5"]:before {
+		.file-icon(json);
+	}
+
+	[data-name^=".gitattributes"]:before,
+	[data-name^=".gitconfig"]:before,
+	[data-name^=".gitignore"]:before,
+	[data-name^=".gitkeep"]:before,
+	[data-name^=".gitmodules"]:before {
+		.file-icon(git2);
+	}
+
+	[data-name$=".php"]:before {
+		.file-icon(php2);
+	}
+
+	[data-name$=".py"]:before,
+	[data-name="requirements.txt"]:before {
+		.file-icon(python);
+	}
+
+	[data-name$=".cs"]:before {
+		.file-icon(csharp);
+	}
+
+	[data-name$=".csproj"]:before {
+		.file-icon(csharp);
+	}
+
+	[data-name$=".less"]:before {
+		.file-icon(less);
+	}
+
+	[data-name$=".sass"]:before,
+	[data-name$=".scss"]:before {
+		.file-icon(sass);
+	}
+
+	.title.icon-markdown:before,
+	[data-name$=".markdown"]:before,
+	[data-name$=".mdown"]:before,
+	[data-name$=".mkd"]:before,
+	[data-name$=".mkdown"]:before,
+	[data-name*=".md"]:before {
+		.file-icon(markdown);
+	}
+
+	[data-name$=".gif"]:before,
+	[data-name$=".jpg"]:before,
+	[data-name$=".png"]:before {
+		.file-icon(image);
+	}
+
+	[data-name$=".bbnsh"]:before,
+	[data-name$=".bbnsi"]:before,
+	[data-name$=".nsh"]:before,
+	[data-name$=".nsi"]:before {
+		.file-icon(nsis);
+	}
+
+	[data-name$=".rspec"]:before {
+		.file-icon(rspec);
+	}
+
+	[data-name$=".erb"]:before {
+		.file-icon(erb);
+	}
+
+	[data-name$=".eot"]:before,
+	[data-name$=".ttf"]:before,
+	[data-name$=".woff"]:before,
+	[data-name$=".woff2"]:before {
+		.file-icon(fonts);
+	}
+
+	[data-name$=".rb"]:before,
+	[data-name$=".ru"]:before,
+	[data-name^="Appraisals"]:before,
+	[data-name^="Berksfile"]:before,
+	[data-name^="Capfile"]:before,
+	[data-name^="Dangerfile"]:before,
+	[data-name^="Deliverfile"]:before,
+	[data-name^="Fastfile"]:before,
+	[data-name^="Gemfile"]:before,
+	[data-name^="Guardfile"]:before,
+	[data-name^="Jarfile"]:before,
+	[data-name^="Mavenfile"]:before,
+	[data-name^="Podfile"]:before,
+	[data-name^="Puppetfile"]:before,
+	[data-name^="Rakefile"]:before,
+	[data-name^="Snapfile"]:before {
+		.file-icon(ruby);
+	}
+
+	[data-name$=".rubocop.yml"]:before {
+		.file-icon(rubocop);
+	}
+
+	[data-name^=".bootstraprc"]:before {
+		.file-icon(bootstrap);
+	}
+
+	[data-name^="webpack.config"]:before {
+		.file-icon(webpack);
+	}
+
+	[data-name$=".hbs"]:before {
+		.file-icon(handlebars);
+	}
+
+	[data-name$=".handlebars"]:before {
+		.file-icon(handlebars);
+	}
+
+	[data-name$=".styl"]:before {
+		.file-icon(stylus);
+	}
+
+	[data-name$=".babelrc"]:before {
+		.file-icon(babel);
+	}
+
+	[data-name$=".sql"]:before {
+		.file-icon(database);
+	}
+
+	[data-name$=".twig"]:before {
+		.file-icon(twig);
+	}
+
+	[data-name$=".ts"]:before {
+		.file-icon(typescript);
+	}
+
+	[data-name$=".cjsx"]:before,
+	[data-name$=".coffee"]:before,
+	[data-name$=".cson"]:before {
+		.file-icon(coffeescript);
+	}
+
+	[data-name$="Vagrantfile"]:before {
+		.file-icon(vagrant);
+	}
+
+	[data-name$=".pp"]:before {
+		.file-icon(puppet);
+	}
+
+	[data-name$="kitchen.yml"]:before {
+		.file-icon(chef);
+	}
+
+	[data-name$=".bash_profile"]:before,
+	[data-name$=".bashrc"]:before,
+	[data-name$=".sh"]:before {
+		.file-icon(bash);
+	}
+
+	[data-name$=".sls"]:before {
+		.file-icon(saltstack);
+	}
+
+	[data-name^=".dockerignore"]:before,
+	[data-name^="Dockerfile"]:before {
+		.file-icon(docker);
+	}
+
+	[data-name$=".haml"]:before {
+		.file-icon(haml);
+	}
+
+	[data-name$=".jade"]:before {
+		.file-icon(jade);
+	}
+
+	[data-name$=".pug"]:before {
+		.file-icon(pug);
+	}
+
+	[data-name$=".editorconfig"]:before {
+		.file-icon(editorconfig);
+	}
+
+	[data-name$=".java"]:before {
+		.file-icon(java);
+	}
+
+	[data-name$=".jar"]:before {
+		.file-icon(java);
+	}
+
+	[data-name$=".svg"]:before {
+		.file-icon(svg);
+	}
+
+	[data-name$=".go"]:before {
+		.file-icon(go);
+	}
+
+	[data-name$=".pl"]:before {
+		.file-icon(perl);
+	}
+
+	[data-name$=".nodemonignore"]:before,
+	[data-name$="nodemon.json"]:before {
+		.file-icon(nodemon);
+	}
+
+	[data-name$=".postcss"]:before,
+	[data-name$=".sss"]:before {
+		.file-icon(postcss);
+	}
+
+	[data-name$=".dart"]:before {
+		.file-icon(dart);
+	}
+
+	[data-name$=".erl"]:before {
+		.file-icon(erlang);
+	}
+
+	[data-name$=".clj"]:before {
+		.file-icon(clojure);
+	}
+
+	[data-name$=".cljs"]:before {
+		.file-icon(cljs);
+	}
+
+	[data-name="ionic.project"]:before {
+		.file-icon(ionic);
+	}
+
+	[data-name$=".hx"]:before,
+	[data-name$=".hxml"]:before,
+	[data-name$=".hxsl"]:before {
+		.file-icon(haxe);
+	}
+
+	[data-name$=".lua"]:before {
+		.file-icon(lua);
+	}
+
+	[data-name$=".hs"]:before {
+		.file-icon(haskell);
+	}
+
+	[data-name$=".deb"]:before {
+		.file-icon(debian);
+	}
+
+	[data-name^="shipitfile"][data-name$=".js"]:before {
+		.file-icon(shipit);
+	}
+
+	[data-name^=".travis"]:before {
+		.file-icon(travis-ci);
+	}
+
+	[data-name^=".gitlab"]:before {
+		.file-icon(gitlab);
+	}
+
+	[data-name="circle.yml"]:before {
+		.file-icon(circle-ci);
+	}
+
+	[data-name="karma.conf"]:before {
+		.file-icon(karma);
+	}
+
+	[data-name="jasmine.json"]:before {
+		.file-icon(jasmine);
+	}
+
+	[data-name^=".eslintignore"]:before,
+	[data-name^=".eslintrc"]:before {
+		.file-icon(eslint);
+	}
+
+	[data-name="httpd.conf"]:before,
+	[data-name^=".htaccess"]:before,
+	[data-name^=".htpasswd"]:before,
+	[data-name^="apache"][data-name$=".conf"]:before {
+		.file-icon(apache);
+	}
+
+	[data-name$=".rlib"]:before,
+	[data-name$=".rs"]:before {
+		.file-icon(rust);
+	}
+
+	[data-name$=".scala"]:before {
+		.file-icon(scala);
+	}
+
+	[data-name=".npmignore"]:before,
+	[data-name=".npmrc"]:before,
+	[data-name="npm-debug.log"]:before,
+	[data-name="package.json"]:before {
+		.file-icon(npm2);
+	}
+
+	[data-name="yarn.lock"]:before {
+		.file-icon(yarn);
+	}
+
+	[data-name$=".bowerrc"]:before,
+	[data-name="bower.json"]:before {
+		.file-icon(bower);
+	}
+
+	[data-name="composer.json"]:before,
+	[data-name="composer.lock"]:before {
+		.file-icon(composer);
+	}
+
+	[data-name^="Gruntfile"]:before,
+	[data-name^="gruntfile"]:before {
+		.file-icon(grunt);
+	}
+
+	[data-name^="Gulpfile"]:before,
+	[data-name^="gulpfile"]:before {
+		.file-icon(gulp);
+	}
+
+	[data-name$=".pdf"]:before {
+		.file-icon(pdf);
+	}
+
+	[data-name$=".sequelizerc"]:before {
+		.file-icon(sequelize);
+	}
+
+	[data-name^="brunch-config"]:before {
+		.file-icon(brunch);
+	}
+
+	[data-name$=".elm"]:before {
+		.file-icon(elm);
+	}
+
+	[data-name$=".swift"]:before {
+		.file-icon(swift);
+	}
+
+	[data-name="Procfile"]:before {
+		.file-icon(heroku);
+	}
+
+	[data-name$=".applescript"]:before,
+	[data-name$=".scpt"]:before,
+	[data-name$=".scptd"]:before {
+		.file-icon(applescript);
+	}
+}
+
+.tree-view {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+
+	.expanded > div > .icon-file-directory:before {
+		.file-icon(default_folder_opened)
+	}
+
+	.expanded > div {
+		[data-name="node_modules"]:before {
+			.file-icon(node_folder_opened)
+		}
+
+		[data-name="fonts"]:before {
+			.file-icon(fonts_folder_opened)
+		}
+
+		[data-name="images"]:before {
+			.file-icon(images_folder_opened)
+		}
+
+		[data-name$=".meteor"]:before {
+			.file-icon(meteor);
+		}
+	}
+
+	.directory {
+		[data-name="node_modules"]:before {
+			.file-icon(node_folder)
+		}
+
+		[data-name="fonts"]:before {
+			.file-icon(fonts_folder)
+		}
+
+		[data-name="images"]:before {
+			.file-icon(images_folder)
+		}
+
+		[data-name$=".meteor"]:before {
+			.file-icon(meteor);
+		}
+
+		[data-name$=".git"]:before {
+			.file-icon(git2);
+		}
+
+		[data-name^="Gulpfile"]:before,
+		[data-name^="gulpfile"]:before {
+			.file-icon(gulp);
+		}
+
+		[data-name^="Gruntfile"]:before,
+		[data-name^="gruntfile"]:before {
+			.file-icon(grunt);
+		}
+
+		[data-name^="webpack.config"]:before {
+			.file-icon(webpack);
+		}
+	}
+}
+
+.list-tree.has-collapsable-children .list-nested-item > .list-item::before {
+	content: '';
+	width: 12px;
+	height: 12px;
+}
+// TODO: add an option to enable/disable icons in grammar list
+// .grammar-selector {
+//
+//     li[data-grammar^="Java"]:after { .grammar-icon(java); }
+//     li[data-grammar^="HTML"]:after { .grammar-icon(html5); }
+//     li[data-grammar^="Less"]:after { .grammar-icon(less); }
+//     li[data-grammar^="Sass"]:after,
+//     li[data-grammar^="SCSS"]:after { .grammar-icon(sass); }
+//     li[data-grammar*="Javascript"]:after,
+//     li[data-grammar*="JavaScript"]:after { .grammar-icon(javascript); }
+//     li[data-grammar^="Git "]:after { .grammar-icon(git); }
+//     li[data-grammar^="Ruby"]:after { .grammar-icon(ruby); }
+//     li[data-grammar^="Twig"]:after { .grammar-icon(twig); }
+//     li[data-grammar^="Python"]:after { .grammar-icon(python); }
+//     li[data-grammar^="Shell"]:after { .grammar-icon(bash); }
+//     li[data-grammar="Go"]:after,
+//     li[data-grammar^="Go "]:after { .grammar-icon(go); }
+//     li[data-grammar^="CoffeeScript"]:after { .grammar-icon(coffeescript); }
+//     li[data-grammar^="Perl"]:after { .grammar-icon(perl); }
+//     li[data-grammar^="JSON"]:after { .grammar-icon(json); }
+//     li[data-grammar*="Babel"]:after { .grammar-icon(babel); }
+//     li[data-grammar="editorconfig"]:after { .grammar-icon(editorconfig); }
+//     li[data-grammar^="Clojure"]:after { .grammar-icon(clojure); }
+//     li[data-grammar^="SQL"]:after { .grammar-icon(database); }
+//     li[data-grammar^="PHP"]:after { .grammar-icon(php); }
+//
+//     // GRAMMAR LIST:
+//     /*
+//         "Auto Detect", "Plain Text", "Babel ES6 JavaScript", "C", "C#", "C# Cake File", "C# Script File", "C++",
+//         "Clojure", "CoffeeScript", "CoffeeScript (Literate)", "CSS", "CSS (Twig)", "Diff", "editorconfig",
+//         "Git Commit Message", "Git Config", "Git Rebase Message", "GitHub Markdown", "Go", "Go Template",
+//         "HTML", "HTML (Go)", "HTML (Handlebars)", "HTML (Mustache)", "HTML (Rails)", "HTML (Ruby - ERB)",
+//         "HTML (Twig)", "Hyperlink", "Java", "Java Properties", "JavaScript", "JavaScript (Rails)", "Javascript (Twig)",
+//         "JavaServer Pages", "JSON", "JSON (Twig)", "JUnit Test Report", "Less", "Makefile", "NAnt Build File",
+//         "Objective-C", "Objective-C++", "Perl", "Perl 6", "PHP", "Property List (Old-Style)", "Property List (XML)",
+//         "Python", "Python Console", "Python Traceback", "Regular Expression Replacement (JavaScript)",
+//         "Regular Expressions (Babel)", "Regular Expressions (JavaScript)", "Regular Expressions (Python)",
+//         "Ruby", "Ruby on Rails", "Ruby on Rails (RJS)", "Sass", "SCSS", "Shell Script", "Shell Session",
+//         "SQL", "SQL (Mustache)", "SQL (Rails)", "Strings File", "TODO", "TOML", "Twig", "XML", "XML (Twig)",
+//         "XSL", "YAML", "YAML (Twig)"
+//     */
+//
+// }
