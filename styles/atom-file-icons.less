@@ -82,7 +82,8 @@
 .fuzzy-finder .list-group,
 .tab,
 .tree-view .file {
-	[data-name$=".env"]:before {
+	[data-name$=".env"]:before,
+	[data-name$=".properties"]:before, {
 		.file-icon(config);
 	}
 
@@ -237,7 +238,8 @@
 		.file-icon(babel);
 	}
 
-	[data-name$=".sql"]:before {
+	[data-name$=".sql"]:before,
+	[data-name$=".ctl"]:before {
 		.file-icon(database);
 	}
 
@@ -269,7 +271,26 @@
 
 	[data-name$=".bash_profile"]:before,
 	[data-name$=".bashrc"]:before,
-	[data-name$=".sh"]:before {
+	[data-name$=".sh"]:before
+	[data-name$=".ksh"]:before,
+	[data-name$=".zsh"]:before,
+	[data-name$=".csh"]:before,
+	[data-name$=".tcsh"]:before,
+	[data-name$=".bash"]:before,
+	[data-name=".profile"]:before,
+	[data-name=".kshrc"]:before,
+	[data-name=".bash_logout"]:before,
+	[data-name=".inputrc"]:before,
+	[data-name=".zshrc"]:before,
+	[data-name=".zfunc"]:before,
+	[data-name=".cshrc"]:before,
+	[data-name=".tcshrc"]:before,
+	[data-name=".logout"]:before,
+	[data-name=".login"]:before,
+	[data-name=".zprofile"]:before,
+	[data-name=".zshenv"]:before,
+	[data-name=".zlogin"]:before,
+	[data-name=".zlogout"]:before {
 		.file-icon(bash);
 	}
 
@@ -298,10 +319,16 @@
 		.file-icon(editorconfig);
 	}
 
-	[data-name$=".java"]:before {
-		.file-icon(java);
+	[data-name$=".cfc"]:before,
+	[data-name$=".cfm"]:before,
+	[data-name$=".cfx"]:before {
+		.file-icon(coldfusion);
 	}
 
+	[data-name$=".java"]:before,
+	[data-name$=".war"]:before,
+	[data-name$=".ear"]:before,
+	[data-name$=".jsp"]:before,
 	[data-name$=".jar"]:before {
 		.file-icon(java);
 	}
