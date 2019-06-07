@@ -499,6 +499,19 @@
 	[data-name$=".scptd"]:before {
 		.file-icon(applescript);
 	}
+
+	[data-name$=".c"]:before,
+	[data-name$=".h"]:before {
+		.file-icon(c);
+	}
+
+	[data-name$=".cpp"]:before,
+	[data-name$=".cxx"]:before,
+	[data-name$=".hpp"]:before,
+	[data-name$=".hxx"]:before {
+		.file-icon(cpp);
+	}
+	
 }
 
 .tree-view {
